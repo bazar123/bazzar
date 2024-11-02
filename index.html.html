@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+     <!-- Header with sticky navigation -->
+     <header class="header">
+        <a href="#home" class="logo">MyStore</a>
+        <nav class="nav-links">
+            <a href="#featuredProducts">Featured</a>
+            <a href="#newArrivals">New Arrivals</a>
+            <a href="#topSellers">Top Sellers</a>
+            <input type="text" placeholder="Search products" class="search-bar">
+            <button id="search-button">Search</button>
+            <a href="#cart" class="cart-icon">🛒</a>
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </nav>
+       
+        <div id="header-right">
+            <div id="favorites">
+                <i class="fas fa-heart favorites-icon"></i>
+                <span></span>
+                <span id="favorites-count">0</span>
+            </div>
+            <div id="cart">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                <span>car :</span>
+                <span id="cart-count">0</span> items
+            </div>
+             <!-- Language Dropdown -->
+             <div class="language-dropdown">
+                <select id="language-select">
+                    <option value="en" data-flag="flag-icon-us" class="flag-icon flag-icon-us">English</option>
+                    <option value="es" data-flag="flag-icon-es" class="flag-icon flag-icon-es">Spanish</option>
+                    <option value="fr" data-flag="flag-icon-fr" class="flag-icon flag-icon-fr">French</option>
+                    <option value="de" data-flag="flag-icon-de" class="flag-icon flag-icon-de">German</option>
+                    <option value="zh" data-flag="flag-icon-cn" class="flag-icon flag-icon-cn">Chinese</option>
+                </select>
+            </div>
+            <!-- Profile Section -->
+        <div class="profile-dropdown">
+            <img src="profile-icon.png" alt="Profile" id="profile-icon" />
+            <div class="profile-menu">
+                <p id="profile-name">John Doe</p>
+                <p id="profile-email">johndoe@example.com</p>
+                <button id="logout-button">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Bar -->
+    <div class="categories-bar">
+        <a href="#category1">Category 1</a>
+        <a href="#category2">Category 2</a>
+        <a href="#category3">Category 3</a>
+        <a href="#category4">Category 4</a>
+        <a href="#category5">Category 5</a>
+    </div>   
+    </header>
+
+    <!-- Main Content Area -->
+    <div id="main-content">
+        <h2>Products</h2>
+        <div class="product-row">
+            <div class="product-section">
+                <h3>Category 1</h3>
+                <div class="product-list">
+                    <div class="product">
+                        <h4>Product 1</h4>
+                        <p>Price: $10</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                    <div class="product">
+                        <h4>Product 2</h4>
+                        <p>Price: $20</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-section">
+                <h3>Category 2</h3>
+                <div class="product-list">
+                    <div class="product">
+                        <h4>Product 3</h4>
+                        <p>Price: $15</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                    <div class="product">
+                        <h4>Product 4</h4>
+                        <p>Price: $25</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-section">
+                <h3>Category 3</h3>
+                <div class="product-list">
+                    <div class="product">
+                        <h4>Product 5</h4>
+                        <p>Price: $30</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                    <div class="product">
+                        <h4>Product 6</h4>
+                        <p>Price: $40</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-section">
+                <h3>Category 4</h3>
+                <div class="product-list">
+                    <div class="product">
+                        <h4>Product 7</h4>
+                        <p>Price: $50</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                    <div class="product">
+                        <h4>Product 8</h4>
+                        <p>Price: $60</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-section">
+                <h3>Category 5</h3>
+                <div class="product-list">
+                    <div class="product">
+                        <h4>Product 9</h4>
+                        <p>Price: $70</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                    <div class="product">
+                        <h4>Product 10</h4>
+                        <p>Price: $80</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-section">
+                <h3>Category 6</h3>
+                <div class="product-list">
+                    <div class="product">
+                        <h4>Product 11</h4>
+                        <p>Price: $90</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                    <div class="product">
+                        <h4>Product 12</h4>
+                        <p>Price: $100</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-favorites">Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-favorites">Add to Favorites</button>
+            </div>
+                <div id="loading-spinner" class="loading-spinner">
+                    Loading...
+                </div>
+            </div>
+        </main>
+
+        <!-- Favorites Summary -->
+        <aside id="favorites-summary">
+            <h2>Favorites</h2>
+            <ul id="favorites-items"></ul>
+        </aside>
+
+        <!-- Cart Summary -->
+        <aside id="cart-summary">
+            <h2>Cart Summary</h2>
+            <ul id="cart-items"></ul>
+            <p id="total">Total: $0.00</p>
+            <button id="checkout">Checkout</button>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Registration Form -->
+<div id="registration-modal" class="modal">
+    <div class="modal-content">
+        <h2>Register</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="account-type">Account Type:</label>
+        <select id="account-type" required>
+            <option value="buyer">Buyer</option>
+            <option value="seller">Seller</option>
+        </select>
+
+        <button id="register-button">Register</button>
+    </div>
+</div>
+
+<!-- Profile Dropdown in Header -->
+<div class="profile-dropdown">
+    <img src="profile-icon.png" alt="Profile" id="profile-icon" />
+    <div class="profile-menu">
+        <p id="profile-name"></p>
+        <p id="profile-email"></p>
+        <p id="account-role"></p>
+        <button id="logout-button">Logout</button>
+    </div>
+</div>
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header" onclick="toggleChat()">
+        <h4>Chat with us</h4>
+        <span id="chatToggle">+</span>
+    </div>
+    <div class="chat-body" id="chatBody">
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type a message..." onkeydown="if(event.key === 'Enter') sendMessage()" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+    <button id="addProductBtn" onclick="showAddProductForm()">Add Product</button>
+    
+    <!-- Form to add a product (initially hidden) -->
+    <div id="addProductForm" style="display: none;">
+        <h3>Add a New Product</h3>
+        <input type="text" id="productName" placeholder="Product Name" required />
+        <input type="number" id="productPrice" placeholder="Product Price" required />
+        <textarea id="productDescription" placeholder="Product Description"></textarea>
+        <button onclick="addProduct()">Submit Product</button>
+    </div>
+</div>
+<!-- Seller Dashboard -->
+<div id="sellerDashboard" class="dashboard">
+    <h2>Seller Dashboard</h2>
+    
+    <!-- Sales Summary -->
+    <div class="dashboard-section">
+        <h3>Sales Summary</h3>
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h4>Total Sales</h4>
+                <p id="totalSales">$0</p>
+            </div>
+            <div class="summary-card">
+                <h4>Total Orders</h4>
+                <p id="totalOrders">0</p>
+            </div>
+            <div class="summary-card">
+                <h4>Total Revenue</h4>
+                <p id="totalRevenue">$0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inventory Management -->
+    <div class="dashboard-section">
+        <h3>Inventory Management</h3>
+        <button id="addProductBtn" onclick="showAddProductForm()">Add Product</button>
+        <div id="productList">
+            <!-- Dynamically filled with JavaScript -->
+        </div>
+    </div>
+
+    <!-- Order Management -->
+    <div class="dashboard-section">
+        <h3>Recent Orders</h3>
+        <div id="orderList">
+            <!-- Dynamically filled with JavaScript -->
+        </div>
+    </div>
+
+    <!-- Performance Metrics -->
+    <div class="dashboard-section">
+        <h3>Performance Metrics</h3>
+        <p>Average Rating: <span id="averageRating">0</span>/5</p>
+        <p>Top Selling Product: <span id="topProduct">N/A</span></p>
+        <p>Total Reviews: <span id="totalReviews">0</span></p>
+    </div>
+
+    <!-- Settings -->
+    <div class="dashboard-section">
+        <h3>Settings</h3>
+        <button onclick="editProfile()">Edit Profile</button>
+        <button onclick="editBusinessInfo()">Edit Business Info</button>
+    </div>
+</div>
+
+<!-- Product Form (initially hidden) -->
+<div id="addProductForm" style="display: none;">
+    <h3>Add a New Product</h3>
+    <input type="text" id="productName" placeholder="Product Name" required />
+    <input type="number" id="productPrice" placeholder="Product Price" required />
+    <textarea id="productDescription" placeholder="Product Description"></textarea>
+    <button onclick="addProduct()">Submit Product</button>
+</div>
+<button onclick="addToWishlist(productId)">Add to Wishlist</button>
+<section id="featuredProducts">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+        <!-- Featured products will be dynamically loaded here -->
+    </div>
+</section>
+<section id="newArrivals">
+    <h2>New Arrivals</h2>
+    <div class="product-grid">
+        <!-- New arrival products will be dynamically loaded here -->
+    </div>
+</section>
+<section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-container">
+        <!-- Testimonials will be dynamically loaded here -->
+    </div>
+</section>
+<section id="popularCategories">
+    <h2>Popular Categories</h2>
+    <div class="categories-grid">
+        <!-- Categories will be dynamically loaded here -->
+    </div>
+</section>
+<section id="topSellers">
+    <h2>Top Sellers</h2>
+    <div class="product-grid">
+        <!-- Top-selling products will be dynamically loaded here -->
+    </div>
+</section>
+
+<section id="bestDeals">
+    <h2>Best Deals</h2>
+    <div class="product-grid">
+        <!-- Discounted products will be dynamically loaded here -->
+    </div>
+</section>
+<section id="blogSection">
+    <h2>Latest Tips & Guides</h2>
+    <div class="blog-container">
+        <!-- Blog posts will be dynamically loaded here -->
+    </div>
+</section>
+<section id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Sign up for our newsletter and get 10% off your first order!</p>
+    <input type="email" placeholder="Enter your email" required />
+    <button onclick="subscribeNewsletter()">Subscribe</button>
+</section>
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <button onclick="toggleFaq(1)">What is the return policy?</button>
+        <p id="faq1" class="faq-answer">Our return policy lasts 30 days...</p>
+    </div>
+    <!-- Additional FAQs here -->
+</section>
+<section id="storeLocator">
+    <h2>Find a Store Near You</h2>
+    <div id="map"></div>
+    <!-- Embed map with JavaScript and API for dynamic loading -->
+</section>
+<section id="userProfile">
+    <h2>Your Account</h2>
+    <div>
+        <button onclick="viewOrderHistory()">Order History</button>
+        <button onclick="viewSavedItems()">Saved Items</button>
+        <button onclick="viewRecommendations()">Recommendations</button>
+    </div>
+</section>
+<section id="community">
+    <h2>Join Our Community</h2>
+    <p>Follow us on social media to see the latest updates and featured products from our customers.</p>
+    <div class="social-icons">
+        <a href="https://instagram.com">Instagram</a>
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://twitter.com">Twitter</a>
+    </div>
+</section>
+<section id="giftIdeas">
+    <h2>Gift Ideas & Bundles</h2>
+    <div class="product-grid">
+        <!-- Gift ideas and bundles will be dynamically loaded here -->
+    </div><section id="loyaltyProgram">
+    <h2>Loyalty Program</h2>
+    <p>Earn points on every purchase and unlock exclusive rewards!</p>
+    <button onclick="learnMoreLoyalty()">Learn More</button>
+</section>
+
+</section>
+<section id="loyaltyProgram">
+    <h2>Loyalty Program</h2>
+    <p>Earn points on every purchase and unlock exclusive rewards!</p>
+    <button onclick="learnMoreLoyalty()">Learn More</button>
+</section>
+<body>
+    <!-- Featured Products Section moved to the top -->
+    <section id="featuredProducts">
+        <h2>Featured Products</h2>
+        <img src="product.jpg" alt="Product Name" />
+<button aria-label="Add to Cart">Add to Cart</button>
+
+        <div class="product-grid">
+            <div class="product-item">Product 1</div>
+            <div class="product-item">Product 2</div>
+            <div class="product-item">Product 3</div>
+            <div class="product-item">Product 4</div>
+            <div class="product-item">Product 5</div>
+            <div class="product-item">Product 6</div>
+        </div>
+    </section>
+
+    <!-- Middle Section (Keeping this as-is) -->
+    <section id="middleContent">
+        <h2>Exclusive Offers</h2>
+        <p>Explore our exclusive deals on a wide range of products.</p>
+        <!-- Additional middle content goes here -->
+    </section>
+
+    <!-- Other Sections moved after middle section -->
+    <section id="newArrivals">
+        <h2>New Arrivals</h2>
+        <div class="product-grid">
+            <div class="product-item">New Arrival 1</div>
+            <div class="product-item">New Arrival 2</div>
+            <div class="product-item">New Arrival 3</div>
+        </div>
+    </section>
+
+    <section id="topSellers">
+        <h2>Top Sellers</h2>
+        <div class="product-grid">
+            <div class="product-item">Top Seller 1</div>
+            <div class="product-item">Top Seller 2</div>
+            <div class="product-item">Top Seller 3</div>
+        </div>
+    </section>
+
+    <!-- Additional sections like testimonials, blog, etc., go here -->
+    <div class="cart-preview" id="cartPreview">
+        <h3>Cart Summary</h3>
+        <p>Items in Cart: <span id="cartCount">0</span></p>
+        <button onclick="goToCheckout()">Checkout</button>
+    </div>
+    <button onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+    <button onclick="toggleDarkMode()" id="darkModeToggle">🌙</button>
+    <div id="authContainer">
+        <!-- Sign Up Form -->
+        <div id="signupContainer" style="display:none;">
+            <form id="signupForm">
+                <h2>Sign Up</h2>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <div id="confirmationMessage" style="display:none;">
+                <h3>Thank you for signing up!</h3>
+                <p>Please check your email to confirm your account.</p>
+            </div>
+        </div>
+
+        <!-- Sign Up Form for Sellers -->
+        <div id="sellerSignupContainer" style="display:none;">
+            <form id="sellerSignupForm">
+                <h2>Seller Sign Up</h2>
+
+                <label for="businessName">Business Name:</label>
+                <input type="text" id="businessName" name="businessName" required>
+
+                <label for="sellerEmail">Email:</label>
+                <input type="email" id="sellerEmail" name="sellerEmail" required>
+
+                <label for="sellerPhone">Phone Number:</label>
+                <input type="tel" id="sellerPhone" name="sellerPhone" required>
+
+                <label for="sellerPassword">Password:</label>
+                <input type="password" id="sellerPassword" name="sellerPassword" required>
+
+                <button type="submit">Sign Up as Seller</button>
+            </form>
+            <div id="sellerConfirmationMessage" style="display:none;">
+                <h3>Thank you for signing up as a seller!</h3>
+                <p>Please check your email to confirm your account.</p>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginContainer">
+            <form id="loginForm">
+                <h2>Login</h2>
+
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <div id="loginMessage" style="display:none;">
+                <h3>Welcome back!</h3>
+                <p>You are now logged in.</p>
+            </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <button id="toggleFormButton">Switch to Sign Up</button>
+        <button id="showSignupButton" style="display:none;">Show Sign Up Form</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+
+
+
+
+
+</body>
+</html>
